@@ -1,4 +1,31 @@
-# zcxtable
+##  蝉云VUE框架 V1.0
+
+蝉云Vue2.0 + Element框架V1.0文档
+
+### 目录结构说明
+
+1. API接口：src/api/apiurl/index.js
+2. 上传文件：src/api/upload.js
+3. 富文本编辑器：src/components/tinymce/index.vue
+4. 表格组件：src/components/zTable/index.vue
+5. 系统配置：src/config/env.js
+6. 菜单图标配置：src/const/iconList.js
+7. 表格组件及按钮样式css：src/styles/ztable.less
+8. 案例：src/views/demo/index.vue
+
+### 如何配置菜单及路由
+
+1. 首先在src/views目录下创建一个文件夹，例如：demo
+2. 其次创建index.vue文件，如需新增编辑，则创建modules文件夹，然后再里面创建editView.vue文件
+3. 然后将项目运行起来登录，左上角打开菜单->系统管理->菜单管理->新增
+4. 路由地址从views下开始，例如：/demo/index(只有一级)，/demo(有子级)
+5. 然后在系统管理->角色管理->权限按钮勾选上对应的菜单，最后退出重新登录一下
+
+### 如何使用封装组件
+修改配置文件src/config/env.js中的sysToken、baseUrl
+先将子组件src/components/zTable/zTable.vue引用进来，API接口的定义于集成看demo.vue
+
+
 <template #topData>顶部插槽</template>
 <template #Search>搜索条件插槽</template> 如果使用此插槽，需要传:searchFrom给子组件zTable
 <template #upBtn>表格上方按钮插槽</template>
